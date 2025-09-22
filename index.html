@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shreya Jain Portfolio</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <!-- Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="styles.css"/>
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+
+  <!-- Lottie Animation -->
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+
+
+</head>
+
+<body>
+  <!-- Left Sidebar -->
+ <aside class="left-panel text-white p-4 d-flex flex-column justify-content-center">
+  <div class="text-center">
+    <img src="images/shreya_red.png" alt="Shreya Jain" class="profile-img mb-3" />
+    
+    <h1 class="name">Shreya Jain</h1>
+    <p class="domain mb-1">Data Scientist | Data Analyst | NLP</p>
+    <p class="location mb-2"><i class="bi bi-geo-alt-fill"></i> Ann Arbor, MI, USA</p>
+
+    <div class="social-links mb-3">
+      <a href="https://linkedin.com/in/your-link" target="_blank">LinkedIn</a> | 
+      <a href="https://github.com/JainShreya26" target="_blank">GitHub</a>
+    </div>
+
+    <p class="quote mt-4">Data is more than numbers; it’s the story of the world waiting to be understood. With curiosity, precision, and a touch of creativity, I turn raw information into insights that drive smarter decisions.</p>
+    
+    <a href="Jain_Shreya.pdf" target="_blank" class="btn btn-light mt-4">Go to Resume</a>
+  </div>
+</aside>
+
+  <!-- Right Main Content -->
+  <main class="right-panel">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><b>Shreya's Portfolio</b></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link" href="#about"><b>About</b></a></li>
+            <li class="nav-item"><a class="nav-link" href="#skills"><b>Skills</b></a></li>
+            <li class="nav-item"><a class="nav-link" href="#experience"><b>Experience</b></a></li>
+            <li class="nav-item"><a class="nav-link" href="#projects"><b>Projects</b></a></li>
+            <li class="nav-item"><a class="nav-link" href="#publications"><b>Publications</b></a></li>
+            <li class="nav-item"><a class="nav-link" href="#contact"><b>Contact</b></a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Content Sections -->
+    <!-- <section id="about" class="p-5 section"><h2>About Me</h2><p>...</p></section> -->
+
+    <section id="about" class="p-5 section">
+        
+        <div class="container">
+            <h2 class="section-title text-center mb-4">About Me</h2>
+            <div class="card shadow rounded-4 p-4 bg-white border-0">
+            <div class="row align-items-center g-4 flex-column flex-md-row">
+                
+                <!-- Lottie or Image -->
+                <div class="col-md-4 text-center">
+                <dotlottie-player
+                    src="https://lottie.host/70b676e7-4b1c-49d3-9646-69c274e0df0b/vVhETn4hGB.lottie"
+                    background="transparent"
+                    speed="1"
+                    style="width: 220px; height: 220px"
+                    loop autoplay>
+                </dotlottie-player>
+                </div>
+
+                <!-- Text Content -->
+                <div class="col-md-8 about-text">
+                <p class="fs-5 text-dark mb-0">
+                    I am a passionate data scientist with a strong foundation in machine learning, NLP, and data analytics. 
+                    With experience spanning academia, healthcare, and government projects, I thrive on solving complex 
+                    problems with innovative solutions. I love learning, adapting to new challenges, and leveraging data to drive meaningful impact. 
+                    Whether it's fine-tuning AI models, automating workflows, or visualizing insights, I bring 
+                    curiosity, creativity, and a problem-solving mindset to everything I do.
+                </div>
+
+            </div>
+            </div>
+        </div>
+        </section>
+    
+    <!-- <section id="skills" class="p-5 section bg-light"><h2>Skills</h2><p>...</p></section> -->
+
+    <div class="skills-toggle mb-4">
+  <!-- <button id="tagViewBtn" class="view-toggle active">Skill Tags</button> -->
+  <!-- <button id="cloudViewBtn" class="view-toggle">3D Word Cloud</button> -->
+</div>
+
+<div id="skillTagView">
+
+    <section id="skills" class="section bg-white px-4 py-5">
+  <div class="container text-center">
+    <h2 class="section-title mb-3">Skills</h2>
+    <p class="subtitle mb-4">What I bring to the table</p>
+
+    <!-- Filter Tabs -->
+    <div class="skill-filters mb-4">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="programming">Programming</button>
+      <button class="filter-btn" data-filter="ml">ML & AI</button>
+      <button class="filter-btn" data-filter="tools">Libraries & Tools</button>
+      <button class="filter-btn" data-filter="soft">Soft Skills</button>
+    </div>
+
+    <!-- Skill Grid -->
+    <div class="skill-grid" id="skillGrid">
+      <!-- Each span has data-category -->
+      <span class="skill-pill" data-category="programming">Python</span>
+      <span class="skill-pill" data-category="programming">R</span>
+      <span class="skill-pill" data-category="programming">SQL</span>
+      <span class="skill-pill" data-category="programming">JavaScript</span>
+      <span class="skill-pill" data-category="programming">HTML/CSS</span>
+      <span class="skill-pill" data-category="programming">Matlab</span>
+
+      <span class="skill-pill" data-category="tools">NumPy</span>
+      <span class="skill-pill" data-category="tools">Pandas</span>
+      <span class="skill-pill" data-category="tools">Seaborn</span>
+      <span class="skill-pill" data-category="tools">Power BI</span>
+      <span class="skill-pill" data-category="tools">Tableau</span>
+      <span class="skill-pill" data-category="tools">Git</span>
+      <span class="skill-pill" data-category="tools">OpenCV</span>
+      <span class="skill-pill" data-category="tools">Keras</span>
+
+      <span class="skill-pill" data-category="ml">Machine Learning</span>
+      <span class="skill-pill" data-category="ml">Deep Learning</span>
+      <span class="skill-pill" data-category="ml">Reinforcement Learning</span>
+      <span class="skill-pill" data-category="ml">Causal Inference</span>
+      <span class="skill-pill" data-category="ml">Computer Vision</span>
+      <span class="skill-pill" data-category="ml">NLP</span>
+      <span class="skill-pill" data-category="ml">Data Mining</span>
+      <span class="skill-pill" data-category="ml">Statistics</span>
+      <span class="skill-pill" data-category="ml">Scikit-learn</span>
+      <span class="skill-pill" data-category="ml">TensorFlow</span>
+      <span class="skill-pill" data-category="ml">PyTorch</span>
+
+      <span class="skill-pill" data-category="soft">Teamwork</span>
+      <span class="skill-pill" data-category="soft">Adaptability</span>
+      <span class="skill-pill" data-category="soft">Time Management</span>
+      <span class="skill-pill" data-category="soft">Problem Solving</span>
+      <span class="skill-pill" data-category="soft">Critical Thinking</span>
+      <span class="skill-pill" data-category="soft">Public Speaking</span>
+    </div>
+  </div>
+</section>
+
+  </div>
+
+
+<!-- Skill section ends here -->
+
+<!-- EDUCATION -->
+<section id="education" class="section px-4 py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Education</h2>
+    <div class="row g-4">
+
+      <!-- UMich -->
+      <div class="col-md-6">
+        <div class="edu-card text-center p-4">
+          <img src="images/U-M-logo.png" class="edu-logo mb-3" alt="UMich Logo" />
+          <h5 class="edu-title">University of Michigan</h5>
+          <p class="edu-location">Ann Arbor, MI, USA</p>
+          <p><strong>Master's in Data Science</strong></p>
+
+          <p><strong>Achievements:</strong> GSI with tuition waiver (SI649), research assistantships, Ross Hackathon (2024 & 2025), TAMU Healthcare Hackathon</p>
+
+          <button class="btn btn-outline-primary mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#umichCourses">
+            View Courses
+          </button>
+          <div class="collapse mt-2 text-start" id="umichCourses">
+            <ul class="edu-list">
+              <li>Probability and Distribution</li>
+              <li>Statistical Inference I & II</li>
+              <li>Machine Learning, Regression, Time Series</li>
+              <li>Causal Inference, Data Analytics & Viz</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIIT -->
+      <div class="col-md-6">
+        <div class="edu-card text-center p-4">
+          <img src="images/viit_logo.png" class="edu-logo mb-3" alt="VIIT Logo" />
+          <h5 class="edu-title">Savitribai Phule Pune University</h5>
+          <p class="edu-location">Pune, MH, India</p>
+          <p><strong>B.Tech in Information Technology</strong></p>
+
+          <p><strong>Achievements:</strong> Event Head at Codechef, TedxVIIT, Finance/Sponsorship, Sports Club Rep</p>
+
+          <button class="btn btn-outline-primary mt-2" type="button" data-bs-toggle="collapse" data-bs-target="#viitCourses">
+            View Courses
+          </button>
+          <div class="collapse mt-2 text-start" id="viitCourses">
+            <ul class="edu-list">
+              <li>Machine Learning, AI, Discrete Maths</li>
+              <li>OS, Networking, Data Structures</li>
+              <li>C/C++, Java, HTML/CSS, JS, PHP</li>
+              <li>Object-Oriented Programming</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Experience Section Starts Here -->
+
+<!-- <section id="projects" class="p-5 section"><h2>Projects</h2><p>...</p></section> -->
+    <section id="experience" class="section  bg-white px-4 py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Experience</h2>
+
+    <!-- Filter Buttons -->
+    <div class="experience-filters mb-5 text-center">
+      <!-- <button class="exp-filter-btn active" data-filter="all">All</button>
+      <button class="exp-filter-btn" data-filter="us">United States</button>
+      <button class="exp-filter-btn" data-filter="india">India</button> -->
+      <button class="exp-filter-btn active" data-filter="all">🌍 All</button>
+      <button class="exp-filter-btn" data-filter="us">🇺🇸 United States</button>
+      <button class="exp-filter-btn" data-filter="india">🇮🇳 India</button>
+      <!-- <button class="exp-filter-btn" data-filter="ireland">🇮🇪 Ireland</button> -->
+
+
+    </div>
+
+    <div class="timeline" id ="timeline">
+
+      <!-- US Experience -->
+      <div class="timeline-block" data-country="us">
+        <div class="timeline-date">Apr 2025 – Present</div>
+        <h5>Data Scientist – Michigan Medicine</h5>
+        <p class="timeline-location">Ann Arbor, MI</p>
+        <ul>
+          <li>Implementing the DECI model (Microsoft Causica) to generate and analyze causal graphs and compare produced adjacency matrices with those generated using the DoWhy library to evaluate model accuracy and consistency</li>
+          <li>Assessing the reliability of synthetic data by analyzing and comparing adjacency matrices of original and synthetic datasets through quantitative techniques such as network centrality and graph similarity</li>
+          <li> Developed a semantic search pipeline using Retrieval-Augmented Generation (RAG) on ASO guideline documents, leveraging LangChain and vector stores. Experimented with multiple text splitting strategies to optimize chunking for improved retrieval accuracy in domain-specific LLM tasks.</li>
+        </ul>
+      </div>
+
+      <div class="timeline-block" data-country="us">
+        <div class="timeline-date">Jun 2024 – Dec 2024</div>
+        <h5>Data Analyst – UM Precision Health</h5>
+        <p class="timeline-location">Ann Arbor, MI</p>
+        <ul>
+          <li>Increased survey participation rates by 50% by curating surveys and developing SQL queries and Python-based analytics to process and extract insights from response data, identifying key behavioral patterns and trends</li>
+          <li>Developed real-time Power BI dashboards for survey monitoring</li>
+          <li>Implemented reinforcement learning-based interactive games to assess patient attention span, collecting structured behavioral data for deeper analysis</li>
+        </ul>
+      </div>
+
+      <div class="timeline-block" data-country="us">
+        <div class="timeline-date">Jun 2024 – Nov 2024</div>
+        <h5>Research Assistant – School of Information, UMich</h5>
+        <p class="timeline-location">Ann Arbor, MI</p>
+        <ul>
+          <li>Achieved 98% word retrieval accuracy by developing a web scraping model for structured data extraction from American Historical textbooks</li>
+          <li>Increased classification accuracy by 10% by expanding spaCy NER annotations with 7 new historical categories</li>
+          <li>Cut manual validation time by 2 hours per dataset by creating an algorithm for data annotation verification</li>
+          <li>Pre-processed and trained LLMs model on OntoNotes 5 and a custom data, fine-tuning GPT-NER and Meta-Llama-3-8B-Instruct using LoRA and 4-bit quantization, achieving 66% NER accuracy, improving historical NER</li>
+        </ul>
+      </div>
+
+      <div class="timeline-block" data-country="us">
+        <div class="timeline-date">Jun 2024 – Dec 2024</div>
+        <h5>Graduate Student Instructor – SI649</h5>
+        <p class="timeline-location">Ann Arbor, MI</p>
+        <ul>
+          <li>Taught data visualization using Tableau, Plotly, Altair, D3.js, and GenAI tools.</li>
+          <li>Led interactive design labs with real-world datasets.</li>
+        </ul>
+      </div>
+
+      <!-- India Experience -->
+      <div class="timeline-block" data-country="india">
+        <div class="timeline-date">Oct 2022 – May 2023</div>
+        <h5>Data Science Intern – Ministry of Defence</h5>
+        <p class="timeline-location">Pune, India</p>
+        <ul>
+          <li>Enabled real-time skeletal tracking for army drills by developing an AI-based pose estimation model using OpenCV,
+              Mediapipe, and YOLOv8, tailored for military movement analysis</li>
+          <li>Deployed a real-time feedback system generating automated pose correction reports and annotated video snippets, assisting
+            trainees with immediate visual guidance. Deployed the algorithm using Flask</li>
+          <li> Designed and Created UI/UX using Figma and user-friendly web application using Flask. Paper submitted to IEEE</li>  
+        </ul>
+      </div>
+
+      <!-- Ireland Experience (we’ll keep it under “All”) -->
+      <div class="timeline-block" data-country="india">
+        <div class="timeline-date">Aug 2022 – Dec 2022</div>
+        <h5>Data Scientist – Beyond Business Travel</h5>
+        <p class="timeline-location">TUS, Ireland (Remote)</p>
+        <ul>
+          <li>Built a data extraction pipeline for Enterprise and Hertz invoices using OCR, NLP, and machine learning, achieving 98%
+              accuracy and reduced manual entry time</li>
+          <li>Outperformed RPA tools such as BluePrism and UIpath with improved anomaly detection and 75% faster processing.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="text-center mt-4">
+      <button id="toggle-all" class="exp-filter-btn small" aria-expanded="false" hidden>Show more</button>
+    </div>
+
+  </div>
+</section>
+
+
+
+            <!-- <section id="contact" class="p-5 section bg-light"><h2>Contact</h2><p>...</p></section> -->
+
+
+
+<!-- Projects  -->
+
+<section id="projects" class="section px-4 py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Projects</h2>
+
+    <div class="row g-4">
+
+      <!-- Project Card -->
+
+      <!--  PROJECT 1 -->
+      <div class="col-md-6">
+        <div class="project-card">
+            <img src="images/causal_new.png" class="project-image" alt="Project Image" />
+                <div class="project-content">
+                    <h5>🧠 VAE Variants for Causal Effect Estimation</h5>
+                    <p class="project-time">Nov 2024 – Dec 2024</p>
+                    <!-- <p>
+                        Extended the CEVAE model using PyTorch and TensorFlow to improve causal inference under unmeasured confounders using various VAE architectures.
+                    </p> -->
+
+                    <ul>
+                      <li>Extended the CEVAE model to improve causal inference under unmeasured confounders using PyTorch and TensorFlow</li>
+                      <li> Implemented VAE variations, including Correlated-V AE, Beta-VAE, HVAE, and VQ-VAE, for enhanced latent variable modeling</li>
+                      <li>Conducted experiments on real-world (IHDP, JOBS, TWINS) and synthetic datasets using Pyro and Adamax optimizer
+                          achieving the best PEHE of 1.47 ± 0.18 and ATE error of 1.26 ± 0.75 on the JOBS dataset</li>
+                    </ul>
+                    <div class="project-tags">
+                        <span>PyTorch</span><span>TensorFlow</span><span>CEVAE</span><span>Pyro</span><span>Adamax</span><span>Causal Inference</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--  PROJECT 2 -->
+
+      <div class="col-md-6">
+        <div class="project-card">
+            <img src="images/soccer_2.png" class="project-image" alt="Project Image" />
+                <div class="project-content">
+                    <h5>⚽ Soccer Analytics Dashboard</h5>
+                    <p class="project-time">Apr 2024</p>
+                    <ul>
+                      <li> Analyzed and processed over 3 million soccer records from 11+ datasets using SQL and Python, performing data cleaning,
+                          feature engineering, and statistical evaluation</li>
+                      <li> Developed an interactive Tableau dashboard to visualize key soccer analytics </li>
+                      </ul>
+                    <div class="project-tags">
+                        <span>SQL</span><span>Python</span><span>Data Cleaning</span><span>Feature Engineering</span><span>Tableau</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--  PROJECT 3 -->
+      <div class="col-md-6">
+        <div class="project-card">
+            <img src="images/tb.png" class="project-image" alt="Project Image" />
+                <div class="project-content">
+                <h5>🦠 TB Forecasting with ARIMA and POMP</h5>
+                <p class="project-time">Nov 2023 – Dec 2023</p>
+                <ul>
+                  <li>Improved TB incidence forecasting accuracy by comparing ARIMA and SEIRS-based POMP models</li>
+                  <li>Implemented a stochastic POMP model with overdispersion and time-varying transmission, achieving a more realistic fit to TB
+decline trends over time </li>
+                </ul>
+                <div class="project-tags">
+                    <span>R</span><span>Time Series</span><span>ARIMA</span><span>POMP</span><span>SEIRS</span><span>Data Viz</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!--  PROJECT 4 -->
+      <div class="col-md-6">
+        <div class="project-card">
+            <img src="images/shark.png" class="project-image" alt="Project Image" />
+            <div class="project-content">
+            <h5>🦈 Shark Tank Deal Prediction</h5>
+            <p class="project-time">Oct 2022 – Dec 2022</p>
+           <ul>
+            <li> Identified key trends in startup features (industry, revenue, valuation) by performing exploratory data analysis using Python
+                (Pandas, Matplotlib, Seaborn) and R</li>
+            <li> Achieved an F1-score of 87.09% by building a machine learning pipeline with ANN, outperforming SVM and Random Forest
+                  in predicting startup funding offers </li>
+            <li> Improved post-investment evaluation by implementing a fuzzy logic system in MATLAB with 22 rule sets to categorize deal
+                quality</li>      
+            </ul>
+            <div class="project-tags">
+                <span>Python</span><span>R</span><span>Machine Learning</span><span>ANN</span><span>Fuzzy Logic</span><span>EDA</span>
+          </div>
+        </div>
+      </div>
+</div>
+</div>
+</section>
+
+<!-- /* Projects section ends */ -->
+
+
+<!-- Publications section -->
+<section id="publications" class="section bg-white px-4 py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Publications</h2>
+    
+    <div class="row g-4">
+      <!-- Publication Card 1 -->
+      <div class="col-lg-8 mx-auto">
+        <div class="publication-card p-4 rounded-4 shadow-sm border-0">
+          <div class="d-flex align-items-start">
+            <div class="publication-icon me-3">
+              <i class="bi bi-file-text-fill text-primary fs-4"></i>
+            </div>
+            <div class="publication-content flex-grow-1">
+              <h5 class="publication-title mb-2"> Offer and Deal-Quality Prediction using Machine learning and Fuzzy approach: A
+                Shark Tank India Case Study</h5>
+              <p class="publication-authors mb-2">
+                <strong>Shreya Jain</strong> Atharva Parikh 
+              </p>
+              <p class="publication-venue mb-2">
+                <em>Proceedings of the ACM Web Conference 2023</em>
+              </p>
+                   <p class="publication-year mb-3">
+                     <a href="https://dl.acm.org/doi/abs/10.1145/3590837.3590891" class="btn btn-outline-primary btn-sm me-2">
+                       <i class="bi bi-file-pdf"></i> Link
+                     </a>
+                     <span class="badge bg-primary">2023</span>
+                     <span class="badge bg-success ms-2">Published</span>
+                   </p>
+              <!-- <p class="publication-abstract mb-3">
+                Developed an AI-based pose estimation model using OpenCV, Mediapipe, and YOLOv8 for real-time skeletal tracking 
+                of army drills. The system provides automated pose correction reports and annotated video snippets for immediate 
+                visual guidance to trainees.
+              </p> -->
+              <!-- <div class="publication-links">
+                <a href="https://dl.acm.org/doi/abs/10.1145/3590837.3590891" class="btn btn-outline-primary btn-sm me-2" disabled>
+                  <i class="bi bi-file-pdf"></i> Link
+                </a> -->
+                <!-- <a href="#" class="btn btn-outline-secondary btn-sm me-2" disabled>
+                  <i class="bi bi-link-45deg"></i> DOI
+                </a>
+                <span class="text-muted small">Paper under review</span> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div class="container"> -->
+        <!-- <h2 class="section-title text-center mb-5">Publications</h2> -->
+        
+        <div class="row g-4">
+          <!-- Publication Card 1 -->
+          <div class="col-lg-8 mx-auto">
+            <div class="publication-card p-4 rounded-4 shadow-sm border-0">
+              <div class="d-flex align-items-start">
+                <div class="publication-icon me-3">
+                  <i class="bi bi-file-text-fill text-primary fs-4"></i>
+                </div>
+                <div class="publication-content flex-grow-1">
+                  <h5 class="publication-title mb-2">Empowering India’s Climate Action: Harnessing Blockchain for Carbon Trading</h5>
+                  <p class="publication-authors mb-2">
+                    <strong>Shreya Jain</strong> Atharva Parikh, Riddhi Pawar, Shruti Jawale 
+                  </p>
+                  <p class="publication-venue mb-2">
+                    <em>2024 IEEE International Conference on Blockchain and Distributed Systems Security (ICBDS)</em>
+                  </p>
+                   <p class="publication-year mb-3">
+                     <a href="https://ieeexplore.ieee.org/document/10837382" class="btn btn-outline-primary btn-sm me-2">
+                       <i class="bi bi-file-pdf"></i> Link
+                     </a>
+                     <span class="badge bg-primary">2024</span>
+                     <span class="badge bg-success ms-2">Published</span>
+                   </p>
+                  <!-- <p class="publication-abstract mb-3">
+                    Developed an AI-based pose estimation model using OpenCV, Mediapipe, and YOLOv8 for real-time skeletal tracking 
+                    of army drills. The system provides automated pose correction reports and annotated video snippets for immediate 
+                    visual guidance to trainees.
+                  </p> -->
+                  <!-- <div class="publication-links">
+                    <a href="https://ieeexplore.ieee.org/document/10837382" class="btn btn-outline-primary btn-sm me-2" disabled>
+                      <i class="bi bi-file-pdf"></i> Link
+                    </a> -->
+                    <!-- <a href="#" class="btn btn-outline-secondary btn-sm me-2" disabled>
+                      <i class="bi bi-link-45deg"></i> DOI
+                    </a>
+                    <span class="text-muted small">Paper under review</span> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+</section>
+
+<!-- Contact section -->
+<section id="contact" class="section px-4 py-5">
+  <div class="container">
+    <h2 class="section-title text-center mb-4">Contact Me</h2>
+    <p class="text-center text-muted mb-4">(shreyadj@umich.edu)</p>
+
+    <div class="row justify-content-center">
+      <div class="col-lg-8">
+        <div class="contact-card p-4 rounded-4">
+          <form id="contactForm" novalidate>
+            <div class="mb-3">
+              <label for="fullname" class="form-label fw-semibold">Full Name <span class="text-danger">*</span></label>
+              <input type="text" id="fullname" name="fullname" class="form-control" required />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label fw-semibold">Email <span class="text-danger">*</span></label>
+              <input type="email" id="email" name="email" class="form-control" required />
+            </div>
+
+            <div class="mb-4">
+              <label for="message" class="form-label fw-semibold">Message <span class="text-danger">*</span></label>
+              <textarea id="message" name="message" rows="4" class="form-control" required></textarea>
+            </div>
+
+            <div class="text-center">
+              <button type="submit" class="btn btn-dark px-4 rounded-pill">Send Message</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact  -->
+    
+
+
+<!-- Contact Section -->
+
+<!-- Contact Ends -->
+</main>
+
+
+
+<!-- JAVASCRIPT -->
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<!-- TagCanvas script -->
+<script src="https://www.goat1000.com/tagcanvas.min.js" async></script>
+
+
+<!-- JS for skill pill -->
+<script>
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const skillPills = document.querySelectorAll(".skill-pill");
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Toggle active button
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      const category = button.getAttribute("data-filter");
+
+      skillPills.forEach(pill => {
+        if (category === "all" || pill.dataset.category === category) {
+          pill.style.display = "inline-block";
+        } else {
+          pill.style.display = "none";
+        }
+      });
+    });
+  });
+</script>
+
+<!-- EXPERIENCE JS -->
+
+<!-- <script>
+  const expButtons = document.querySelectorAll(".exp-filter-btn");
+  const timelineBlocks = document.querySelectorAll(".timeline-block");
+
+  expButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      expButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      const filter = button.getAttribute("data-filter");
+
+      timelineBlocks.forEach(block => {
+        const country = block.getAttribute("data-country");
+
+        if (filter === "all" || country === filter) {
+          block.style.display = "block";
+        } else {
+          block.style.display = "none";
+        }
+      });
+    });
+  });
+</script> -->
+
+
+<!-- Contact Section -->
+
+<script>
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const name = document.getElementById("fullname").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const message = document.getElementById("message").value.trim();
+
+    if (!name || !email || !message) {
+      alert("Please fill out all required fields.");
+      return;
+    }
+
+    const subject = encodeURIComponent("Portfolio Message from " + name);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+    const mailtoLink = `mailto:shreyadj@umich.edu?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoLink;
+  });
+</script>
+
+
+<!-- Experience JS -->
+
+<script>
+(function () {
+  const timeline = document.getElementById('timeline');
+  const allBlocks = Array.from(timeline.querySelectorAll('.timeline-block'));
+  // Only pick filter buttons from the filter bar
+  const filterBtns = Array.from(document.querySelectorAll('.experience-filters .exp-filter-btn'));
+  const toggleBtn = document.getElementById('toggle-all');
+
+  let allExpanded = false;
+
+  function clampAll(expand) {
+    allBlocks.forEach((el, idx) => {
+      el.classList.toggle('is-hidden', !expand && idx >= 3);
+    });
+    allExpanded = !!expand;
+    toggleBtn.textContent = expand ? 'Show less' : 'Show more';
+    toggleBtn.setAttribute('aria-expanded', String(expand));
+  }
+
+  function applyFilter(filter) {
+    allBlocks.forEach(block => {
+      const match = filter === 'all' || block.dataset.country === filter;
+      block.style.display = match ? '' : 'none';
+      if (filter !== 'all') block.classList.remove('is-hidden');
+    });
+
+    if (filter === 'all') {
+      const visible = allBlocks.filter(b => b.style.display !== 'none');
+      if (visible.length > 3) {
+        toggleBtn.hidden = false;
+        clampAll(false);
+      } else {
+        toggleBtn.hidden = true;
+      }
+    } else {
+      toggleBtn.hidden = true;
+    }
+  }
+
+  filterBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      filterBtns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      applyFilter(btn.dataset.filter);
+    });
+  });
+
+  toggleBtn.addEventListener('click', () => {
+    clampAll(!allExpanded);
+  });
+
+  applyFilter('all');
+})();
+</script>
+
+
+
+</body>
+</html>
+
+
+
+
+
